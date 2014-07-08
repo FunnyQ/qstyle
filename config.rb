@@ -3,13 +3,18 @@
 ###
 
 # Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
+# using :nested for develop & :compressed for production <==========
+compass_config do |config|
+  config.output_style = :nested
+  config.line_comments = false
+end
 
 ###
 # Page options, layouts, aliases and proxies
 ###
+
+# Default layout
+page "/*", layout: "application"
 
 # Per-page layout changes:
 #
@@ -32,26 +37,28 @@
 # Helpers
 ###
 
+# Asset paths
+set :css_dir, 'css'
+set :js_dir, 'js'
+set :images_dir, 'img'
+set :fonts_dir,  "fonts"
+
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
-# configure :development do
-#   activate :livereload
-# end
+configure :development do
+  activate :livereload
+end
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
-
-set :css_dir, 'css'
-
-set :js_dir, 'js'
-
-set :images_dir, 'img'
+helpers do
+  def nav_link(link_text, url, options = {})
+    options[:class] ||= ""
+    options[:class] << " active" if url == current_page.url
+    link_to(link_text, url, options)
+  end
+end
 
 # Build-specific configuration
 configure :build do
@@ -65,7 +72,7 @@ configure :build do
   # activate :asset_hash
 
   # Use relative URLs
-  # activate :relative_assets
+  activate :relative_assets
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
