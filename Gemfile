@@ -13,6 +13,9 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 # Windows does not come with time zone data
 gem "tzinfo-data", platforms: [:mswin, :mingw]
 
+# using slim template engine
+gem "slim"
+
 # compass and susy
 gem "compass", "1.0.0.alpha.20"
 gem "susy"

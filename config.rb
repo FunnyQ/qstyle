@@ -10,6 +10,13 @@ compass_config do |config|
 end
 
 ###
+# slim config
+###
+
+# Indent html for pretty debugging and do not sort attributes
+Slim::Engine.set_default_options :pretty => true, :sort_attrs => false
+
+###
 # Page options, layouts, aliases and proxies
 ###
 
