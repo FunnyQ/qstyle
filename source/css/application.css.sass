@@ -13,30 +13,30 @@
 @import susy
 @import breakpoint
 @import sassy-buttons
+@import font-awesome
 
 
 // -------------------------------------
-//   Import Variables and mixins
+//   Plugins
 // -------------------------------------
 
-@import variables
-@import mixins
 
 
 // -------------------------------------
-//   Using [Bootstrap] or just [Normalize]
+//   Variables and mixins
+// -------------------------------------
+
+@import partials/variables
+@import partials/mixins
+
+
+// -------------------------------------
+//   Using [Bootstrap]
 // -------------------------------------
 
 // @import vendor/normalize
 
-@import bootstrap
-
-
-// -------------------------------------
-//   Fonts Awesome
-// -------------------------------------
-
-@import font-awesome
+@import vendor/bootstrap
 
 
 /* ==========================================================================
@@ -44,16 +44,16 @@
  * ========================================================================== */
 
 // import color defines
-@import color
+// @import partials/color
 
 // import typography defines
-@import typography
+// @import partials/typography
 
 // import layout defines
-@import layout
+@import partials/layout
 
 // import pages settings
 @import pages/index
 
 // import helper classes
-@import helper
+@import partials/helper
