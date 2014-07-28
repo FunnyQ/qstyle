@@ -10,6 +10,13 @@ compass_config do |config|
 end
 
 ###
+# slim config
+###
+
+# Indent html for pretty debugging and do not sort attributes
+Slim::Engine.set_default_options :pretty => true, :sort_attrs => false
+
+###
 # Page options, layouts, aliases and proxies
 ###
 
@@ -62,6 +69,7 @@ end
 
 # Build-specific configuration
 configure :build do
+
   # For example, change the Compass output style for deployment
   # activate :minify_css
 
@@ -74,6 +82,10 @@ configure :build do
   # Use relative URLs
   activate :relative_assets
 
+  # optimizing images
+  activate :imageoptim
+
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+
 end
