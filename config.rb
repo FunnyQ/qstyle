@@ -50,8 +50,12 @@ set :js_dir, 'js'
 set :images_dir, 'img'
 set :fonts_dir,  "fonts"
 
+
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
+
+# i18n
+# activate :i18n, :langs => [:zh_TW, :en]
 
 # Reload the browser automatically whenever files change
 configure :development do
