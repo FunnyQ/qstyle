@@ -13,9 +13,6 @@ end
 # slim config
 ###
 
-# Indent html for pretty debugging and do not sort attributes
-Slim::Engine.set_default_options :pretty => false, :sort_attrs => false
-
 ###
 # Page options, layouts, aliases and proxies
 ###
