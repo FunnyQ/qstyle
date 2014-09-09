@@ -73,16 +73,44 @@ helpers do
     options[:class] << " active" if url == current_page.url
     link_to(link_text, url, options)
   end
+
+  # set page title
+  def page_title
+    # default title here
+    title = "Q.Style Template"
+
+    if data.page.title
+      title = data.page.title
+    end
+
+    title
+  end
+
+  # set page description
+  def page_description
+    # default description here
+    description = "A middleman template"
+
+    if data.page.description
+      description = data.page.description
+    end
+
+    description
+  end
+
 end
 
 # Build-specific configuration
 configure :build do
 
+  # create favicon and touch icons
+  activate :favicon_maker
+
   # For example, change the Compass output style for deployment
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
 
   # Enable cache buster
   # activate :asset_hash
