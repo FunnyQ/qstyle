@@ -45,6 +45,7 @@ page "/*", layout: "application"
 after_configuration do
   sprockets.append_path File.join root, 'bower_components'
   sprockets.append_path File.join root, 'bower_components', 'bootstrap-sass-official', 'assets', 'fonts'
+  sprockets.append_path File.join root, 'bower_components', 'fontawesome', 'fonts'
 end
 
 # Asset paths

@@ -15,5 +15,6 @@
 ## -------------------------------------
 ##   jQuery / helper plugins
 ## -------------------------------------
-#= require bootstrap-sass-official/assets/javascripts/bootstrap
+#= require vendor/_bootstrap
+#= require angular
 #
