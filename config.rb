@@ -41,6 +41,12 @@ page "/*", layout: "application"
 # Helpers
 ###
 
+# Add bower's directory to sprockets asset path
+after_configuration do
+  sprockets.append_path File.join root, 'bower_components'
+  sprockets.append_path File.join root, 'bower_components', 'bootstrap-sass-official', 'assets', 'fonts'
+end
+
 # Asset paths
 set :css_dir, 'css'
 set :js_dir, 'js'

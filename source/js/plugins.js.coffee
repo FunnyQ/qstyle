@@ -15,6 +15,5 @@
 ## -------------------------------------
 ##   jQuery / helper plugins
 ## -------------------------------------
-#= require "bootstrap-sprockets"
-#
+#= require bootstrap-sass-official/assets/javascripts/bootstrap
 #
