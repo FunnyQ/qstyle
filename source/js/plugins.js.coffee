@@ -17,4 +17,4 @@
 ## -------------------------------------
 #= require vendor/_bootstrap
 #= require angular
-#
+#= require angular-route
