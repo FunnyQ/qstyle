@@ -10,7 +10,7 @@ This is a middleman template with *[H5BP]*, *[Compass + susy + breakpoint]*, *[F
 
 ````sh
 # Clone this repo to Middleman template folder
-$ git clone git:github.com:funnyq/qstyle.git ~/.middleman/qstyle
+$ git clone git:github.com:FunnyQ/qstyle.git ~/.middleman/qstyle
 
 # remove default README.md and Git repo
 $ cd ~/.middleman/qstyle; rm -rf README.md .git/
