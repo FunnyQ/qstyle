@@ -1,11 +1,3 @@
-## *************************************
-##
-##   [Project Name] - Q.Style v1.0.alpha
-##   -> Manifest
-##
-## *************************************
-#
-#
 ## -------------------------------------
 ##   Avoid `console` errors in browsers that lack a console.
 ## -------------------------------------
@@ -16,5 +8,3 @@
 ##   jQuery / helper plugins
 ## -------------------------------------
 #= require vendor/_bootstrap
-#= require angular
-#= require angular-route
