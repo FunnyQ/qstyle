@@ -1,6 +1,4 @@
-###
-# Compass
-###
+require "helpers/qhelpers"
 
 # Change Compass configuration
 compass_config do |config|
@@ -8,9 +6,6 @@ compass_config do |config|
   config.line_comments = false
 end
 
-###
-# slim config
-###
 
 ###
 # Page options, layouts, aliases and proxies
@@ -40,6 +35,8 @@ page "/*", layout: "application"
 # Helpers
 ###
 
+helpers Qhelpers
+
 # Add bower's directory to sprockets asset path
 after_configuration do
   sprockets.append_path File.join root, 'bower_components'
@@ -63,40 +60,6 @@ set :fonts_dir,  "fonts"
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
-end
-
-# Methods defined in the helpers block are available in templates
-helpers do
-  def nav_link(link_text, url, options = {})
-    options[:class] ||= ""
-    options[:class] << " active" if url == current_page.url
-    link_to(link_text, url, options)
-  end
-
-  # set page title
-  def page_title
-    # default title here
-    title = "Q.Style Template"
-
-    if data.page.title
-      title = data.page.title
-    end
-
-    title
-  end
-
-  # set page description
-  def page_description
-    # default description here
-    description = "A middleman template"
-
-    if data.page.description
-      description = data.page.description
-    end
-
-    description
-  end
-
 end
 
 # Build-specific configuration

@@ -20,4 +20,10 @@ $ cd ~/.middleman/qstyle; rm -rf README.md .git/
 ````sh
 # scaffolding a project using Q.Style
 $ middleman init yourProjectName --template=qstyle
+
+# install assets with bower
+$ bower install
+
+# start middleman server and go
+$ middleman s
 ````
